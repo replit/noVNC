@@ -10,7 +10,7 @@
  * Logging/debug routines
  */
 
-let _log_level = 'warn';
+let _log_level = 'debug';
 
 let Debug = () => {};
 let Info = () => {};

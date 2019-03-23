@@ -178,10 +178,10 @@ export default class Websock {
         this._websocket = null;
     }
 
-    open(uri, protocols) {
+    open(replitSocketCreator) {
         this.init();
 
-        this._websocket = new WebSocket(uri, protocols);
+        this._websocket = replitSocketCreator();
         this._websocket.binaryType = 'arraybuffer';
 
         this._websocket.onmessage = this._recv_message.bind(this);
