@@ -6,6 +6,8 @@
  * See README.md for usage and integration instructions.
  */
 
+import * as Log from './util/logging.js';
+
 // The maximum allowable de-sync, in seconds. If the time between the last
 // received timestamp and the current audio playback timestamp exceeds this
 // value, the audio stream will be seeked to the most current timestamp
@@ -46,7 +48,7 @@ export default class AudioStream {
         this._audio.addEventListener(
             "error",
             (ev) => {
-                console.error("Audio element error", ev);
+                Log.Error("Audio element error", ev);
             },
             false
         );
@@ -73,7 +75,7 @@ export default class AudioStream {
             this._onUpdateBuffer.bind(this)
         );
         this._audioBuffer.addEventListener("error", (ev) => {
-            console.error("AudioBuffer error", ev);
+            Log.Error("AudioBuffer error", ev);
         });
     }
 
@@ -130,7 +132,7 @@ export default class AudioStream {
             timestamp - this._audio.currentTime > MAX_ALLOWABLE_DESYNC &&
             (this._audio.seekable.length || this._audio.buffered.length)
         ) {
-            console.debug("maximum allowable desync reached", {
+            Log.Debug("maximum allowable desync reached", {
                 readyState: this._audio.readyState,
                 buffered: (
                     (this._audio.buffered &&
