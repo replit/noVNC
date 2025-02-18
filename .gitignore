@@ -6,6 +6,7 @@ utils/websockify
 /node_modules
 /build
 /lib
+/.direnv/
 recordings
 *.swp
 *~
