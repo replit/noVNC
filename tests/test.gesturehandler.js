@@ -289,7 +289,8 @@ describe('Gesture handler', function () {
 
             touchEnd(1);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gestureend',
                               detail: { type: 'drag',
                                         clientX: 80.0,
@@ -325,7 +326,8 @@ describe('Gesture handler', function () {
 
             touchEnd(1);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gestureend',
                               detail: { type: 'drag',
                                         clientX: 20.0,
@@ -361,7 +363,8 @@ describe('Gesture handler', function () {
 
             touchEnd(1);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gestureend',
                               detail: { type: 'drag',
                                         clientX: 60.0,
@@ -377,7 +380,8 @@ describe('Gesture handler', function () {
 
             clock.tick(1500);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gesturestart',
                               detail: { type: 'longpress',
                                         clientX: 20.0,
@@ -387,7 +391,8 @@ describe('Gesture handler', function () {
 
             touchEnd(1);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gestureend',
                               detail: { type: 'longpress',
                                         clientX: 20.0,
@@ -401,7 +406,8 @@ describe('Gesture handler', function () {
 
             clock.tick(1500);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gesturestart',
                               detail: { type: 'longpress',
                                         clientX: 20.0,
@@ -411,7 +417,8 @@ describe('Gesture handler', function () {
 
             touchMove(1, 120.0, 50.0);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gesturemove',
                               detail: { type: 'longpress',
                                         clientX: 120.0,
@@ -421,7 +428,8 @@ describe('Gesture handler', function () {
 
             touchEnd(1);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gestureend',
                               detail: { type: 'longpress',
                                         clientX: 120.0,
@@ -466,7 +474,8 @@ describe('Gesture handler', function () {
 
             touchEnd(1);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gestureend',
                               detail: { type: 'twodrag',
                                         clientX: 25.0,
@@ -510,7 +519,8 @@ describe('Gesture handler', function () {
 
             touchEnd(1);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gestureend',
                               detail: { type: 'twodrag',
                                         clientX: 25.0,
@@ -554,7 +564,8 @@ describe('Gesture handler', function () {
 
             touchEnd(1);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gestureend',
                               detail: { type: 'twodrag',
                                         clientX: 125.0,
@@ -715,7 +726,8 @@ describe('Gesture handler', function () {
 
             touchEnd(1);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gestureend',
                               detail: { type: 'pinch',
                                         clientX: 65.0,
@@ -759,7 +771,8 @@ describe('Gesture handler', function () {
 
             touchEnd(1);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gestureend',
                               detail: { type: 'pinch',
                                         clientX: 105.0,
@@ -875,7 +888,8 @@ describe('Gesture handler', function () {
 
             touchMove(1, 100.0, 50.0);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gesturemove',
                               detail: { type: 'drag',
                                         clientX: 100.0,
@@ -885,7 +899,8 @@ describe('Gesture handler', function () {
 
             touchEnd(1);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gestureend',
                               detail: { type: 'drag',
                                         clientX: 100.0,
@@ -912,7 +927,8 @@ describe('Gesture handler', function () {
 
             touchEnd(1);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gestureend',
                               detail: { type: 'twodrag' } }));
 
@@ -946,7 +962,8 @@ describe('Gesture handler', function () {
 
             touchMove(1, 100.0, 50.0);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gesturemove',
                               detail: { type: 'drag' } }));
 
@@ -954,7 +971,8 @@ describe('Gesture handler', function () {
 
             touchEnd(1);
 
-            expect(gestures).to.have.been.calledOnceWith(
+            expect(gestures).to.have.been.calledOnce;
+            expect(gestures).to.have.been.calledWith(
                 sinon.match({ type: 'gestureend',
                               detail: { type: 'drag' } }));
 
